@@ -1,0 +1,21 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class EjemploQueueIterador {
+    public static void main(String[] args) {
+        Queue<String> cola = new LinkedList<>();
+        cola.offer("Cliente 1 (Frente)");
+        cola.offer("Cliente 2");
+        cola.offer("Cliente 3 (Final)");
+
+        // Obtener el iterador de la cola
+        Iterator<String> iterator = cola.iterator();
+
+        System.out.println("--- Recorriendo Queue con Iterator ---");
+        while (iterator.hasNext()) {
+            String elemento = iterator.next();
+            System.out.println(elemento);
+        }
+    }
+}
